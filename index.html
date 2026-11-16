@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>فرجينيا | مصنع فرجينيا لتصنيع وتعبئة المواد الغذائية</title>
+<meta name="description" content="مصنع فرجينيا لتصنيع وتعبئة المواد الغذائية — نصنع الجودة ونقدم الثقة. علامة مرعينا MARAEINA." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VIRGINIA — DESIGN SYSTEM
+   ============================================================ */
+:root{
+  --red:#C8102E;
+  --red-dark:#9B0B23;
+  --charcoal:#171717;
+  --white:#FFFFFF;
+  --gold:#F5C400;
+  --warm:#FAFAF7;
+  --g100:#F2F2EE;
+  --g200:#E5E5DF;
+  --g300:#D0D0C8;
+  --g500:#8A8A85;
+  --g700:#444440;
+  --font-ar:'Tajawal','Cairo',system-ui,sans-serif;
+  --font-en:'Inter','Helvetica Neue',sans-serif;
+  --container:1240px;
+  --r-sm:6px; --r-md:12px; --r-lg:20px;
+  --sh-sm:0 2px 8px rgba(23,23,23,.06);
+  --sh-md:0 12px 32px rgba(23,23,23,.10);
+  --sh-lg:0 24px 60px rgba(23,23,23,.16);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-ar);
+  background:var(--warm);
+  color:var(--charcoal);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+
+/* Typography */
+h1,h2,h3,h4{font-weight:800;line-height:1.25;letter-spacing:-.01em}
+.section-title{font-size:clamp(1.9rem,3.5vw,2.9rem);margin-bottom:20px;color:var(--charcoal)}
+.eyebrow{
+  display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.08em;
+  color:var(--red);text-transform:uppercase;margin-bottom:14px;
+  padding:6px 14px;border-radius:100px;background:rgba(200,16,46,.08);
+}
+.lead{font-size:1.15rem;color:var(--g700);margin-bottom:16px;font-weight:500}
+.gold{color:var(--gold)}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 28px;border-radius:100px;font-weight:700;font-size:1rem;
+  transition:all .3s var(--ease);white-space:nowrap;border:2px solid transparent;
+  font-family:inherit;
+}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(200,16,46,.25)}
+.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 12px 28px rgba(200,16,46,.35)}
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-outline:hover{background:#fff;color:var(--charcoal);border-color:#fff;transform:translateY(-2px)}
+.btn-ghost{background:var(--warm);color:var(--charcoal);border:2px solid var(--g200)}
+.btn-ghost:hover{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
+.btn-gold{background:var(--gold);color:var(--charcoal);box-shadow:0 8px 20px rgba(245,196,0,.3)}
+.btn-gold:hover{background:#e0b200;transform:translateY(-2px)}
+.btn-lg{padding:18px 36px;font-size:1.05rem}
+.btn-sm{padding:10px 18px;font-size:.9rem}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  transition:all .35s var(--ease);
+  background:rgba(23,23,23,.0);
+  padding:18px 0;
+}
+.navbar.scrolled{
+  background:rgba(23,23,23,.96);
+  backdrop-filter:blur(16px);
+  padding:12px 0;
+  box-shadow:0 4px 24px rgba(0,0,0,.15);
+}
+.nav-container{
+  max-width:var(--container);margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-logo{width:44px;height:44px;object-fit:contain}
+.brand-name{
+  font-family:var(--font-en);font-weight:800;font-size:1.35rem;
+  color:#fff;letter-spacing:.05em;
+}
+.nav-links{display:flex;align-items:center;gap:6px;flex:1;justify-content:center}
+.nav-links a{
+  color:rgba(255,255,255,.82);font-weight:500;font-size:.95rem;
+  padding:8px 14px;border-radius:100px;transition:all .25s var(--ease);
+}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.1)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.lang-toggle{
+  color:#fff;font-family:var(--font-en);font-weight:600;font-size:.85rem;
+  border:1.5px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:100px;
+  transition:all .25s;
+}
+.lang-toggle:hover{background:#fff;color:var(--charcoal);border-color:#fff}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;width:28px;padding:4px}
+.mobile-toggle span{display:block;height:2px;background:#fff;border-radius:2px;transition:all .3s var(--ease)}
+.mobile-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.mobile-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.mobile-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  color:#fff;overflow:hidden;
+}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-img{width:100%;height:100%;object-fit:cover}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(23,23,23,.88) 0%,rgba(23,23,23,.5) 50%,rgba(200,16,46,.35) 100%);
+}
+.hero-content{position:relative;z-index:2;text-align:center;padding-top:100px}
+.hero-logo{width:110px;margin:0 auto 28px;filter:drop-shadow(0 8px 24px rgba(0,0,0,.4))}
+.hero-logo img{width:100%;height:auto}
+.hero-title{
+  font-size:clamp(2.2rem,5.5vw,4.5rem);
+  font-weight:900;margin-bottom:24px;line-height:1.15;
+  text-shadow:0 4px 24px rgba(0,0,0,.3);
+}
+.hero-sub{
+  font-size:clamp(1rem,1.6vw,1.25rem);max-width:720px;margin:0 auto 40px;
+  color:rgba(255,255,255,.9);font-weight:400;
+}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hero-scroll{
+  margin-top:80px;display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);animation:floatY 2.5s ease-in-out infinite;
+}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* Animations */
+.animate-in{opacity:0;transform:translateY(28px);animation:fadeUp .9s var(--ease) forwards}
+.delay-1{animation-delay:.2s}
+.delay-2{animation-delay:.4s}
+.delay-3{animation-delay:.6s}
+.delay-4{animation-delay:.9s}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+/* ============================================================
+   TRUST STRIP
+   ============================================================ */
+.trust-strip{background:var(--charcoal);color:#fff;padding:32px 0;position:relative;z-index:3}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.trust-item{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:8px 16px;text-align:center;font-weight:600;font-size:.95rem;
+  color:rgba(255,255,255,.85);
+}
+.trust-item+.trust-item{border-inline-start:1px solid rgba(255,255,255,.12)}
+.trust-icon{width:32px;height:32px;color:var(--gold)}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+.section{padding:100px 0;position:relative}
+.section-head{max-width:760px;margin-bottom:56px}
+.section-desc{color:var(--g700);font-size:1.05rem;margin-top:8px}
+
+/* ABOUT */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.about-media{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg)}
+.about-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;transition:transform .8s var(--ease)}
+.about-media:hover img{transform:scale(1.05)}
+.about-media-badge{
+  position:absolute;bottom:24px;inset-inline-start:24px;
+  background:var(--red);color:#fff;padding:16px 24px;border-radius:var(--r-md);
+  box-shadow:var(--sh-md);
+}
+.badge-num{display:block;font-family:var(--font-en);font-weight:800;font-size:1.3rem;letter-spacing:.05em}
+.badge-label{display:block;font-size:.78rem;color:rgba(255,255,255,.85);margin-top:2px}
+.badge-label em{font-style:normal;color:var(--gold)}
+
+.about-tabs{margin-top:32px}
+.tab-headers{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.tab-btn{
+  padding:10px 20px;border-radius:100px;font-weight:600;font-size:.92rem;
+  color:var(--g700);background:var(--g100);transition:all .25s;
+}
+.tab-btn.active{background:var(--red);color:#fff}
+.tab-panel{display:none;animation:fadeUp .4s var(--ease)}
+.tab-panel.active{display:block}
+.values-list{display:grid;gap:10px}
+.values-list li{padding-inline-start:20px;position:relative;color:var(--g700)}
+.values-list li::before{
+  content:"";position:absolute;inset-inline-start:0;top:12px;
+  width:8px;height:8px;border-radius:50%;background:var(--gold);
+}
+
+/* PRODUCTS */
+.products{background:var(--warm)}
+.brand-card{
+  background:#fff;border-radius:var(--r-lg);padding:32px;margin-bottom:40px;
+  box-shadow:var(--sh-sm);border:1px solid var(--g200);
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+}
+.brand-card-head{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.brand-mark{display:flex;flex-direction:column}
+.brand-ar{font-size:1.6rem;font-weight:800;color:var(--red)}
+.brand-en{font-family:var(--font-en);font-size:.85rem;letter-spacing:.15em;color:var(--g500);font-weight:600}
+.brand-tag{background:var(--gold);color:var(--charcoal);padding:6px 14px;border-radius:100px;font-size:.8rem;font-weight:700}
+.brand-desc{color:var(--g700);flex:1;min-width:200px}
+
+.product-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;
+}
+.product-card{
+  background:#fff;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--sh-sm);border:1px solid var(--g200);
+  transition:all .4s var(--ease);display:flex;flex-direction:column;
+}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--gold)}
+.product-media{position:relative;background:var(--g100);aspect-ratio:4/3;overflow:hidden}
+.product-media img{width:100%;height:100%;object-fit:contain;padding:20px;transition:transform .5s var(--ease)}
+.product-card:hover .product-media img{transform:scale(1.08)}
+.product-fav{
+  position:absolute;top:14px;inset-inline-end:14px;width:38px;height:38px;
+  background:#fff;border-radius:50%;display:grid;place-items:center;
+  box-shadow:var(--sh-sm);color:var(--g500);transition:all .25s;
+}
+.product-fav:hover{color:var(--red);transform:scale(1.1)}
+.product-fav svg{width:18px;height:18px}
+.product-body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.product-cat{font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--red);text-transform:uppercase}
+.product-title{font-size:1.15rem;font-weight:800;color:var(--charcoal)}
+.product-title-en{font-family:var(--font-en);font-size:.85rem;color:var(--g500);font-weight:500;margin-top:-4px}
+.product-sizes{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.size-chip{padding:4px 12px;border-radius:100px;background:var(--g100);color:var(--g700);font-size:.8rem;font-weight:600}
+.product-desc{color:var(--g700);font-size:.93rem;line-height:1.65;margin-top:6px}
+.product-actions{display:flex;gap:10px;margin-top:auto;padding-top:12px}
+
+/* MANUFACTURING */
+.manufacturing{background:var(--charcoal);color:#fff;padding:110px 0}
+.manufacturing .section-title{color:#fff}
+.manufacturing .eyebrow{background:rgba(245,196,0,.15);color:var(--gold)}
+.manufacturing .section-desc{color:rgba(255,255,255,.7)}
+.mfg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.mfg-item{
+  position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:1/1;
+  cursor:pointer;
+}
+.mfg-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.mfg-item:hover img{transform:scale(1.08)}
+.mfg-overlay{
+  position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(23,23,23,.9));
+  display:flex;flex-direction:column;justify-content:flex-end;padding:24px;
+}
+.mfg-title{font-size:1.15rem;font-weight:800;color:#fff}
+.mfg-desc{font-size:.85rem;color:rgba(255,255,255,.8);margin-top:4px}
+.mfg-item:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.mfg-item:first-child .mfg-title{font-size:1.6rem}
+
+/* QUALITY */
+.quality{background:#fff}
+.quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.quality-list{display:grid;gap:18px;margin-top:28px}
+.quality-item{
+  display:flex;gap:16px;padding:20px;background:var(--warm);
+  border-radius:var(--r-md);border-inline-start:4px solid var(--red);
+  transition:all .3s;
+}
+.quality-item:hover{transform:translateX(-4px);box-shadow:var(--sh-sm)}
+.quality-icon{
+  width:44px;height:44px;flex-shrink:0;border-radius:50%;
+  background:var(--red);color:#fff;display:grid;place-items:center;
+}
+.quality-icon svg{width:22px;height:22px}
+.quality-item h4{font-size:1rem;margin-bottom:4px}
+.quality-item p{color:var(--g700);font-size:.9rem}
+.quality-media{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg)}
+.quality-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+
+/* PARTNERS */
+.partners{background:linear-gradient(135deg,var(--red) 0%,var(--red-dark) 100%);color:#fff;padding:100px 0}
+.partners .eyebrow{background:rgba(255,255,255,.15);color:#fff}
+.partners .section-title{color:#fff}
+.partners-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.partner-types{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:32px}
+.partner-type{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  padding:18px;border-radius:var(--r-md);display:flex;align-items:center;gap:12px;
+  font-weight:600;font-size:.95rem;transition:all .3s;
+}
+.partner-type:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.partner-type svg{width:22px;height:22px;color:var(--gold);flex-shrink:0}
+.wa-cta{
+  display:inline-flex;align-items:center;gap:12px;margin-top:32px;
+  background:#25D366;color:#fff;padding:16px 28px;border-radius:100px;
+  font-weight:700;transition:all .3s;
+}
+.wa-cta:hover{background:#1eb958;transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,211,102,.35)}
+.wa-cta svg{width:24px;height:24px}
+
+.form-card{background:#fff;color:var(--charcoal);border-radius:var(--r-lg);padding:40px;box-shadow:var(--sh-lg)}
+.form-card h3{margin-bottom:8px;font-size:1.4rem}
+.form-card > p{color:var(--g700);margin-bottom:24px;font-size:.95rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.88rem;font-weight:600;color:var(--g700)}
+.form-group input,.form-group select,.form-group textarea{
+  font-family:inherit;font-size:.95rem;padding:12px 16px;
+  border:1.5px solid var(--g200);border-radius:var(--r-sm);background:var(--warm);
+  transition:all .2s;color:var(--charcoal);
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--red);background:#fff;box-shadow:0 0 0 3px rgba(200,16,46,.1);
+}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-submit{margin-top:20px;width:100%;justify-content:center}
+
+/* NEWS */
+.news{background:var(--warm)}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.news-card{
+  background:#fff;border-radius:var(--r-md);overflow:hidden;
+  box-shadow:var(--sh-sm);transition:all .35s var(--ease);border:1px solid var(--g200);
+}
+.news-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.news-img{aspect-ratio:16/10;overflow:hidden;background:var(--g100)}
+.news-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.news-card:hover .news-img img{transform:scale(1.06)}
+.news-body{padding:24px}
+.news-date{font-size:.8rem;color:var(--g500);font-weight:600;letter-spacing:.04em}
+.news-title{font-size:1.1rem;font-weight:800;margin:8px 0}
+.news-excerpt{color:var(--g700);font-size:.92rem;margin-bottom:12px}
+.news-link{color:var(--red);font-weight:700;font-size:.9rem;display:inline-flex;align-items:center;gap:6px}
+.news-link:hover{gap:10px}
+
+/* CONTACT */
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.contact-info{display:grid;gap:20px}
+.contact-block{display:flex;gap:16px;padding:20px;background:var(--warm);border-radius:var(--r-md)}
+.contact-icon{
+  width:48px;height:48px;flex-shrink:0;border-radius:50%;
+  background:var(--red);color:#fff;display:grid;place-items:center;
+}
+.contact-icon svg{width:22px;height:22px}
+.contact-block h4{font-size:.95rem;margin-bottom:4px;color:var(--charcoal)}
+.contact-block p,.contact-block a{color:var(--g700);font-size:.92rem}
+.contact-block a:hover{color:var(--red)}
+.socials{display:flex;gap:10px;margin-top:8px}
+.socials a{
+  width:40px;height:40px;border-radius:50%;background:var(--charcoal);
+  color:#fff;display:grid;place-items:center;transition:all .25s;
+}
+.socials a:hover{background:var(--red);transform:translateY(-2px)}
+.socials svg{width:18px;height:18px}
+.map-embed{border-radius:var(--r-md);overflow:hidden;height:280px;box-shadow:var(--sh-sm);margin-top:20px}
+.map-embed iframe{width:100%;height:100%;border:0}
+
+/* FOOTER */
+footer{background:var(--charcoal);color:rgba(255,255,255,.75);padding:64px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{display:flex;flex-direction:column;gap:14px}
+.footer-brand .brand-name{color:#fff;font-size:1.4rem}
+.footer-brand p{font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.6)}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:16px;font-weight:700}
+.footer-col a{display:block;padding:6px 0;font-size:.9rem;color:rgba(255,255,255,.7);transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  font-size:.85rem;color:rgba(255,255,255,.5);
+}
+
+/* ============================================================
+   ADMIN DASHBOARD
+   ============================================================ */
+.admin-modal{
+  position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.6);
+  display:none;align-items:center;justify-content:center;padding:24px;
+  backdrop-filter:blur(6px);
+}
+.admin-modal.open{display:flex;animation:fadeIn .3s var(--ease)}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.admin-panel{
+  background:#fff;border-radius:var(--r-lg);width:100%;max-width:1100px;
+  max-height:90vh;overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:var(--sh-lg);animation:scaleIn .35s var(--ease);
+}
+@keyframes scaleIn{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
+.admin-header{
+  padding:24px 32px;background:var(--charcoal);color:#fff;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.admin-header h2{font-size:1.25rem;color:#fff}
+.admin-header h2 span{color:var(--gold);font-family:var(--font-en);font-size:.9rem;display:block;font-weight:500;margin-top:2px}
+.admin-close{
+  width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;
+  display:grid;place-items:center;font-size:1.4rem;transition:all .2s;
+}
+.admin-close:hover{background:var(--red)}
+.admin-tabs{
+  display:flex;gap:0;background:var(--warm);border-bottom:1px solid var(--g200);
+  overflow-x:auto;padding:0 32px;
+}
+.admin-tab{
+  padding:16px 20px;font-weight:600;font-size:.9rem;color:var(--g700);
+  border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;
+}
+.admin-tab.active{color:var(--red);border-bottom-color:var(--red)}
+.admin-body{padding:32px;overflow-y:auto;flex:1}
+.admin-pane{display:none}
+.admin-pane.active{display:block;animation:fadeUp .3s var(--ease)}
+.admin-pane h3{font-size:1.1rem;margin-bottom:20px;color:var(--charcoal)}
+.admin-list{display:grid;gap:12px}
+.admin-row{
+  display:flex;align-items:center;gap:16px;padding:16px;
+  background:var(--warm);border-radius:var(--r-md);border:1px solid var(--g200);
+}
+.admin-row-thumb{
+  width:56px;height:56px;border-radius:var(--r-sm);background:var(--g100);
+  display:grid;place-items:center;flex-shrink:0;overflow:hidden;
+}
+.admin-row-thumb img{width:100%;height:100%;object-fit:contain}
+.admin-row-body{flex:1;min-width:0}
+.admin-row-body strong{display:block;font-size:.95rem;margin-bottom:2px}
+.admin-row-body small{color:var(--g500);font-size:.82rem}
+.admin-row-actions{display:flex;gap:8px}
+.icon-btn{
+  width:36px;height:36px;border-radius:var(--r-sm);display:grid;place-items:center;
+  background:#fff;border:1px solid var(--g200);color:var(--g700);transition:all .2s;
+}
+.icon-btn:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.icon-btn svg{width:16px;height:16px}
+.admin-add{
+  margin-bottom:20px;padding:14px 24px;background:var(--red);color:#fff;
+  border-radius:var(--r-md);font-weight:700;display:inline-flex;align-items:center;gap:8px;
+  transition:all .2s;
+}
+.admin-add:hover{background:var(--red-dark)}
+.admin-add svg{width:18px;height:18px}
+.admin-note{
+  padding:14px 18px;background:rgba(245,196,0,.1);border-radius:var(--r-sm);
+  font-size:.85rem;color:var(--g700);margin-bottom:20px;border-inline-start:3px solid var(--gold);
+}
+
+/* TOAST */
+.toast{
+  position:fixed;bottom:32px;inset-inline-start:32px;z-index:3000;
+  background:var(--charcoal);color:#fff;padding:16px 24px;border-radius:var(--r-md);
+  box-shadow:var(--sh-lg);display:flex;align-items:center;gap:12px;
+  transform:translateY(120%);transition:transform .4s var(--ease);max-width:360px;
+}
+.toast.show{transform:translateY(0)}
+.toast.success{border-inline-start:4px solid #25D366}
+.toast.error{border-inline-start:4px solid var(--red)}
+.toast svg{width:22px;height:22px;flex-shrink:0}
+.toast.success svg{color:#25D366}
+.toast.error svg{color:var(--red)}
+
+/* Floating admin button */
+.fab-admin{
+  position:fixed;bottom:24px;inset-inline-end:24px;z-index:900;
+  width:56px;height:56px;border-radius:50%;background:var(--charcoal);color:#fff;
+  display:grid;place-items:center;box-shadow:var(--sh-lg);transition:all .3s;
+  opacity:.7;
+}
+.fab-admin:hover{opacity:1;transform:scale(1.08);background:var(--red)}
+.fab-admin svg{width:24px;height:24px}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:1024px){
+  .nav-links{display:none}
+  .mobile-toggle{display:flex}
+  .nav-links.open{
+    display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;
+    background:var(--charcoal);padding:20px;gap:4px;align-items:stretch;
+  }
+  .nav-links.open a{padding:12px 16px;text-align:center}
+  .about-grid,.quality-grid,.partners-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .mfg-grid{grid-template-columns:repeat(2,1fr)}
+  .mfg-item:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:16/9}
+  .news-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .admin-tabs{padding:0 16px}
+  .admin-body{padding:20px}
+  .form-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .section{padding:64px 0}
+  .hero{min-height:92vh}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-item+.trust-item{border-inline-start:none}
+  .mfg-grid{grid-template-columns:1fr}
+  .mfg-item:first-child{grid-column:auto;aspect-ratio:1/1}
+  .news-grid,.footer-grid{grid-template-columns:1fr}
+  .product-grid{grid-template-columns:1fr}
+  .brand-card{flex-direction:column;align-items:flex-start}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{width:100%}
+  .form-card{padding:24px}
+  .admin-modal{padding:0}
+  .admin-panel{max-height:100vh;border-radius:0}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="brand">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23C8102E'/><text x='50' y='62' font-family='Inter,sans-serif' font-size='44' font-weight='800' fill='white' text-anchor='middle'>V</text><text x='50' y='82' font-family='Inter,sans-serif' font-size='11' font-weight='600' fill='%23F5C400' text-anchor='middle' letter-spacing='2'>VIRGINIA</text></svg>" alt="VIRGINIA" class="brand-logo" />
+      <span class="brand-name">VIRGINIA</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="#products">منتجاتنا</a>
+      <a href="#manufacturing">التصنيع والتعبئة</a>
+      <a href="#quality">الجودة</a>
+      <a href="#partners">الشراكات</a>
+      <a href="#news">الأخبار</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-toggle" onclick="showToast('English version coming soon — placeholder')">EN</button>
+      <a href="#contact" class="btn btn-primary btn-sm">تواصل معنا</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1920&q=80" alt="مصنع فرجينيا — خط إنتاج" class="hero-img" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content container">
+    <div class="hero-logo animate-in">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='24' fill='%23C8102E'/><text x='60' y='72' font-family='Inter,sans-serif' font-size='56' font-weight='800' fill='white' text-anchor='middle'>V</text><text x='60' y='98' font-family='Inter,sans-serif' font-size='13' font-weight='600' fill='%23F5C400' text-anchor='middle' letter-spacing='3'>VIRGINIA</text></svg>" alt="VIRGINIA" />
+    </div>
+    <h1 class="hero-title animate-in delay-1">
+      نصنع الجودة..<br /><span class="gold">ونقدم الثقة</span>
+    </h1>
+    <p class="hero-sub animate-in delay-2">
+      مصنع فرجينيا لتصنيع وتعبئة المواد الغذائية، نعمل على تقديم منتجات غذائية بجودة واهتمام في كل مرحلة.
+    </p>
+    <div class="hero-cta animate-in delay-3">
+      <a href="#products" class="btn btn-primary btn-lg">اكتشف منتجاتنا</a>
+      <a href="#about" class="btn btn-outline btn-lg">تعرف على المصنع</a>
+    </div>
+    <div class="hero-scroll animate-in delay-4">
+      <span>تعرّف أكثر</span>
+      <svg width="18" height="28" viewBox="0 0 20 30"><rect x="1" y="1" width="18" height="28" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="10" r="3" fill="currentColor"><animate attributeName="cy" values="10;18;10" dur="2s" repeatCount="indefinite"/></circle></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust-strip">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span>جودة في كل تفصيل</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      <span>تصنيع وتعبئة</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      <span>معايير مهنية</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+      <span>توزيع موثوق</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-media">
+        <img src="https://images.unsplash.com/photo-1565895405227-31cffbe0cf86?w=900&q=80" alt="مصنع فرجينيا" />
+        <div class="about-media-badge">
+          <span class="badge-num">VIRGINIA</span>
+          <span class="badge-label">تأسست — <em>قيد التحديث</em></span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">من نحن</span>
+        <h2 class="section-title">فرجينيا.. صناعة تهتم بالتفاصيل</h2>
+        <p class="lead">
+          مصنع فرجينيا لتصنيع وتعبئة المواد الغذائية، متخصص في إنتاج وتعبئة المواد الغذائية بمعايير مهنية عالية، مع التزام راسخ بالجودة والمصداقية في كل منتج نقدمه.
+        </p>
+        <p style="color:var(--g700);margin-bottom:8px">
+          نعمل على تطوير منتجاتنا وعلاماتنا التجارية، ومن أبرزها علامة <strong style="color:var(--red)">مرعينا MARAEINA</strong>، بما يلبي احتياجات المستهلك ويتوافق مع متطلبات الأسواق المحلية والإقليمية.
+        </p>
+        <div class="about-tabs">
+          <div class="tab-headers">
+            <button class="tab-btn active" data-tab="vision">رؤيتنا</button>
+            <button class="tab-btn" data-tab="mission">رسالتنا</button>
+            <button class="tab-btn" data-tab="values">قيمنا</button>
+          </div>
+          <div class="tab-content">
+            <div class="tab-panel active" id="tab-vision">
+              <p style="color:var(--g700)">أن نكون علامة موثوقة في صناعة وتعبئة المواد الغذائية على المستوى المحلي والإقليمي.</p>
+            </div>
+            <div class="tab-panel" id="tab-mission">
+              <p style="color:var(--g700)">تقديم منتجات غذائية عالية الجودة من خلال عمليات تصنيع وتعبئة دقيقة، وبناء شراكات تجارية مستدامة.</p>
+            </div>
+            <div class="tab-panel" id="tab-values">
+              <ul class="values-list">
+                <li><strong>الجودة</strong> — التزام في كل مرحلة.</li>
+                <li><strong>الأمانة</strong> — في المنتج والتعامل.</li>
+                <li><strong>الاحتراف</strong> — في التصنيع والتعبئة.</li>
+                <li><strong>الابتكار</strong> — التطوير المستمر.</li>
+                <li><strong>الثقة</strong> — أساس علاقاتنا.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section class="section products" id="products">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">منتجاتنا</span>
+      <h2 class="section-title">علاماتنا التجارية</h2>
+      <p class="section-desc">من منتجاتنا المميزة — علامة <strong style="color:var(--red)">مرعينا MARAEINA</strong>. منتجاتنا تُصنع وتُعبأ بمعايير جودة عالية.</p>
+    </div>
+
+    <div class="brand-card">
+      <div class="brand-card-head">
+        <div class="brand-mark">
+          <span class="brand-ar">مرعينا</span>
+          <span class="brand-en">MARAEINA</span>
+        </div>
+        <span class="brand-tag">علامة تجارية</span>
+      </div>
+      <p class="brand-desc">منتجات غذائية مختارة بعناية من مصنع فرجينيا.</p>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <!-- Products rendered by JS from data store -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANUFACTURING ============ -->
+<section class="section manufacturing" id="manufacturing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">التصنيع والتعبئة</span>
+      <h2 class="section-title">من المواد الخام إلى المنتج النهائي</h2>
+      <p class="section-desc">نحرص على كل مرحلة من مراحل التصنيع والتعبئة لضمان جودة ثابتة.</p>
+    </div>
+    <div class="mfg-grid">
+      <div class="mfg-item">
+        <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1200&q=80" alt="تصنيع غذائي" />
+        <div class="mfg-overlay"><div class="mfg-title">التصنيع الغذائي</div><div class="mfg-desc">عمليات إنتاج دقيقة وفق معايير مهنية.</div></div>
+      </div>
+      <div class="mfg-item">
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" alt="التعبئة" />
+        <div class="mfg-overlay"><div class="mfg-title">التعبئة</div><div class="mfg-desc">تعبئة آمنة تحافظ على جودة المنتج.</div></div>
+      </div>
+      <div class="mfg-item">
+        <img src="https://images.unsplash.com/photo-1565895405227-31cffbe0cf86?w=800&q=80" alt="خطوط الإنتاج" />
+        <div class="mfg-overlay"><div class="mfg-title">خطوط الإنتاج</div><div class="mfg-desc">معدات حديثة لضمان الكفاءة.</div></div>
+      </div>
+      <div class="mfg-item">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="مراقبة الجودة" />
+        <div class="mfg-overlay"><div class="mfg-title">مراقبة الجودة</div><div class="mfg-desc">فحص دقيق في كل مرحلة.</div></div>
+      </div>
+      <div class="mfg-item">
+        <img src="https://images.unsplash.com/photo-1601598851547-4302969d0614?w=800&q=80" alt="المنتج النهائي" />
+        <div class="mfg-overlay"><div class="mfg-title">المنتج النهائي</div><div class="mfg-desc">جاهز للتوزيع بجودة عالية.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUALITY ============ -->
+<section class="section quality" id="quality">
+  <div class="container">
+    <div class="quality-grid">
+      <div>
+        <span class="eyebrow">الجودة</span>
+        <h2 class="section-title">الجودة تبدأ من التفاصيل</h2>
+        <p class="section-desc">نلتزم بمنهجية عمل تعتمد على مراقبة كل مرحلة من مراحل الإنتاج والتعبئة لضمان منتج يستحق ثقة المستهلك.</p>
+        <div class="quality-list">
+          <div class="quality-item">
+            <div class="quality-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+            <div><h4>ضمان الجودة</h4><p>التزام بمعايير جودة في كل مرحلة إنتاج.</p></div>
+          </div>
+          <div class="quality-item">
+            <div class="quality-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <div><h4>معايير الإنتاج</h4><p>عمليات تصنيع وفق معايير مهنية معتمدة.</p></div>
+          </div>
+          <div class="quality-item">
+            <div class="quality-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+            <div><h4>مراقبة الجودة</h4><p>فحص دوري للمنتجات والعمليات.</p></div>
+          </div>
+          <div class="quality-item">
+            <div class="quality-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+            <div><h4>سلامة المنتج</h4><p>تعبئة آمنة تحافظ على سلامة المنتج.</p></div>
+          </div>
+        </div>
+        <div class="admin-note" style="margin-top:20px">
+          <strong>ملاحظة:</strong> أي شهادات جودة رسمية تُضاف بعد التحقق منها فقط.
+        </div>
+      </div>
+      <div class="quality-media">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=80" alt="مراقبة الجودة" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="section partners" id="partners">
+  <div class="container">
+    <div class="partners-grid">
+      <div>
+        <span class="eyebrow">الشراكات التجارية</span>
+        <h2 class="section-title">كن شريكاً في النجاح</h2>
+        <p style="color:rgba(255,255,255,.85);font-size:1.05rem;margin-bottom:20px">
+          نسعى لبناء شراكات تجارية مستدامة مع الموزعين والتجار والمؤسسات التجارية.
+        </p>
+        <div class="partner-types">
+          <div class="partner-type"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8z"/></svg>موزعون بالجملة</div>
+          <div class="partner-type"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2z"/></svg>متاجر التجزئة</div>
+          <div class="partner-type"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4v-6h16v6z"/></svg>السوبرماركت</div>
+          <div class="partner-type"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>شركاء تجاريون</div>
+        </div>
+        <a href="https://wa.me/000000000000" target="_blank" rel="noopener" class="wa-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          تواصل عبر واتساب
+        </a>
+      </div>
+
+      <div class="form-card">
+        <h3>نموذج طلب شراكة</h3>
+        <p>أخبرنا عن نشاطك التجاري وسنتواصل معك في أقرب وقت.</p>
+        <form onsubmit="handleFormSubmit(event,'partnership')">
+          <div class="form-grid">
+            <div class="form-group"><label>الاسم الكامل</label><input type="text" name="name" required placeholder="اسمك الكامل" /></div>
+            <div class="form-group"><label>اسم الشركة</label><input type="text" name="company" required placeholder="اسم الشركة" /></div>
+            <div class="form-group"><label>رقم الهاتف</label><input type="tel" name="phone" required placeholder="+20 1XX XXX XXXX" /></div>
+            <div class="form-group"><label>المدينة / الدولة</label><input type="text" name="location" required placeholder="القاهرة، مصر" /></div>
+            <div class="form-group full"><label>نوع الشراكة</label>
+              <select name="type" required>
+                <option value="">اختر نوع الشراكة</option>
+                <option>موزع بالجملة</option>
+                <option>متجر تجزئة</option>
+                <option>سوبرماركت</option>
+                <option>شريك تجاري</option>
+                <option>موزع إقليمي</option>
+              </select>
+            </div>
+            <div class="form-group full"><label>رسالتك</label><textarea name="message" placeholder="أخبرنا عن نشاطك التجاري..." required></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">إرسال الطلب</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWS ============ -->
+<section class="section news" id="news">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">الأخبار والتحديثات</span>
+      <h2 class="section-title">آخر المستجدات</h2>
+      <p class="section-desc">تابع أخبارنا، إصدارات المنتجات، وتواجدنا في الأسواق.</p>
+    </div>
+    <div class="news-grid" id="newsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">تواصل معنا</span>
+      <h2 class="section-title">نحن هنا للإجابة على استفساراتك</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-block">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+          <div><h4>الهاتف</h4><p><a href="tel:+200000000000">+20 000 000 0000</a> <em style="color:var(--g500);font-size:.8rem">(placeholder)</em></p></div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon" style="background:#25D366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+          <div><h4>واتساب</h4><p><a href="https://wa.me/000000000000" target="_blank" rel="noopener">تواصل مباشر عبر واتساب</a></p></div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div><h4>البريد الإلكتروني</h4><p><a href="mailto:info@virginia-food.com">info@virginia-food.com</a> <em style="color:var(--g500);font-size:.8rem">(placeholder)</em></p></div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg></div>
+          <div><h4>عنوان المصنع</h4><p>العنوان — <em style="color:var(--g500);font-size:.8rem">قيد التحديث</em></p></div>
+        </div>
+        <div class="contact-block" style="flex-direction:column;align-items:flex-start">
+          <h4 style="margin-bottom:12px">تابعنا</h4>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </div>
+        </div>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.789!2d31.2357!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAyJzM5LjgiTiAzMcKwMTQnMDguNSJF!5e0!3m2!1sen!2seg!4v1600000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع المصنع"></iframe>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>أرسل رسالة</h3>
+        <p>سنتواصل معك في أقرب وقت ممكن.</p>
+        <form onsubmit="handleFormSubmit(event,'contact')">
+          <div class="form-grid">
+            <div class="form-group"><label>الاسم الكامل</label><input type="text" name="name" required /></div>
+            <div class="form-group"><label>البريد الإلكتروني</label><input type="email" name="email" required /></div>
+            <div class="form-group full"><label>رقم الهاتف</label><input type="tel" name="phone" /></div>
+            <div class="form-group full"><label>الرسالة</label><textarea name="message" required></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">إرسال</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23C8102E'/><text x='50' y='62' font-family='Inter,sans-serif' font-size='44' font-weight='800' fill='white' text-anchor='middle'>V</text></svg>" alt="VIRGINIA" width="44" height="44" />
+          <span class="brand-name">VIRGINIA</span>
+        </div>
+        <p>مصنع فرجينيا لتصنيع وتعبئة المواد الغذائية — نصنع الجودة ونقدم الثقة.</p>
+      </div>
+      <div class="footer-col">
+        <h4>الموقع</h4>
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من نحن</a>
+        <a href="#products">منتجاتنا</a>
+        <a href="#manufacturing">التصنيع والتعبئة</a>
+      </div>
+      <div class="footer-col">
+        <h4>الشركة</h4>
+        <a href="#quality">الجودة</a>
+        <a href="#partners">الشراكات</a>
+        <a href="#news">الأخبار</a>
+        <a href="#contact">تواصل معنا</a>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل</h4>
+        <a href="tel:+200000000000">الهاتف</a>
+        <a href="https://wa.me/000000000000">واتساب</a>
+        <a href="mailto:info@virginia-food.com">البريد</a>
+        <a href="#">العنوان</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> VIRGINIA — مصنع فرجينيا لتصنيع وتعبئة المواد الغذائية. جميع الحقوق محفوظة.</span>
+      <span>Quality in Every Detail.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ ADMIN DASHBOARD ============ -->
+<button class="fab-admin" id="fabAdmin" title="لوحة التحكم" aria-label="لوحة التحكم">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.488.488 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+</button>
+
+<div class="admin-modal" id="adminModal" role="dialog" aria-modal="true" aria-label="لوحة التحكم">
+  <div class="admin-panel">
+    <div class="admin-header">
+      <h2>لوحة تحكم VIRGINIA <span>Content Management Dashboard</span></h2>
+      <button class="admin-close" id="adminClose" aria-label="إغلاق">×</button>
+    </div>
+    <div class="admin-tabs">
+      <button class="admin-tab active" data-atab="products">المنتجات</button>
+      <button class="admin-tab" data-atab="news">الأخبار</button>
+      <button class="admin-tab" data-atab="inquiries">الاستفسارات</button>
+      <button class="admin-tab" data-atab="info">معلومات الشركة</button>
+    </div>
+    <div class="admin-body">
+      <!-- Products -->
+      <div class="admin-pane active" data-apane="products">
+        <div class="admin-note">
+          <strong>ملاحظة:</strong> هذا الإصدار يعمل عبر تخزين المتصفح (localStorage) لعرض آلية الإدارة. للاستخدام الحقيقي، يُربط بنظام إدارة محتوى كامل (CMS) وقاعدة بيانات.
+        </div>
+        <button class="admin-add" onclick="adminAddProduct()">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          إضافة منتج
+        </button>
+        <div class="admin-list" id="adminProductList"></div>
+      </div>
+      <!-- News -->
+      <div class="admin-pane" data-apane="news">
+        <button class="admin-add" onclick="adminAddNews()">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          إضافة خبر
+        </button>
+        <div class="admin-list" id="adminNewsList"></div>
+      </div>
+      <!-- Inquiries -->
+      <div class="admin-pane" data-apane="inquiries">
+        <div class="admin-note">الاستفسارات المُرسلة عبر النماذج تُخزّن هنا (تجريبيًا).</div>
+        <div class="admin-list" id="adminInquiryList"></div>
+      </div>
+      <!-- Info -->
+      <div class="admin-pane" data-apane="info">
+        <h3>معلومات الشركة (قابلة للتعديل)</h3>
+        <div class="form-grid">
+          <div class="form-group"><label>الهاتف</label><input type="text" id="infoPhone" value="+20 000 000 0000" /></div>
+          <div class="form-group"><label>واتساب</label><input type="text" id="infoWa" value="+20 000 000 0000" /></div>
+          <div class="form-group"><label>البريد</label><input type="email" id="infoEmail" value="info@virginia-food.com" /></div>
+          <div class="form-group"><label>العنوان</label><input type="text" id="infoAddress" value="العنوان — قيد التحديث" /></div>
+        </div>
+        <button class="btn btn-primary" style="margin-top:20px" onclick="saveCompanyInfo()">حفظ المعلومات</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+  <span id="toastMsg">تم</span>
+</div>
+
+<script>
+/* ============================================================
+   DATA STORE (localStorage-backed for demo; replace with API)
+   ============================================================ */
+const DEFAULT_PRODUCTS = [
+  {
+    id:'maraeina-milk',
+    brand:'مرعينا MARAEINA',
+    category:'حليب مجفف',
+    title:'حليب مرعينا المجفف كامل الدسم',
+    titleEn:'Instant Full Cream Milk Powder',
+    sizes:['400g','900g','2.5kg'],
+    desc:'حليب مجفف كامل الدسم سريع الذوبان، مناسب للاستخدام اليومي وللتحضير في المشروبات والحلويات.',
+    img:'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&q=80'
+  }
+];
+const DEFAULT_NEWS = [
+  {id:'n1', date:'2024-01-01', title:'انطلاق الموقع الرسمي لمصنع فرجينيا', excerpt:'يسعدنا الإعلان عن إطلاق موقعنا الإلكتروني الجديد للتواصل مع شركائنا.', img:'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80'},
+  {id:'n2', date:'2024-02-01', title:'منتج مرعينا — حليب مجفف كامل الدسم', excerpt:'تعرف على منتجنا المميز من علامة مرعينا، المتوفر بأحجام متعددة.', img:'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&q=80'},
+  {id:'n3', date:'2024-03-01', title:'فتح باب الشراكات التجارية', excerpt:'ندعو الموزعين والتجار للتواصل معنا لبناء شراكات تجارية مستدامة.', img:'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80'}
+];
+
+const store = {
+  get(key, fallback){
+    try{ const v = localStorage.getItem('virginia_'+key); return v?JSON.parse(v):fallback; }catch(e){ return fallback; }
+  },
+  set(key, val){ try{ localStorage.setItem('virginia_'+key, JSON.stringify(val)); }catch(e){} }
+};
+
+let products = store.get('products', DEFAULT_PRODUCTS);
+let news = store.get('news', DEFAULT_NEWS);
+let inquiries = store.get('inquiries', []);
+
+/* ============================================================
+   RENDER HELPERS
+   ============================================================ */
+function renderProducts(){
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = products.map(p => `
+    <article class="product-card">
+      <div class="product-media">
+        <img src="${p.img}" alt="${p.title}" loading="lazy" />
+        <button class="product-fav" aria-label="حفظ"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+      </div>
+      <div class="product-body">
+        <span class="product-cat">${p.category}</span>
+        <h3 class="product-title">${p.title}</h3>
+        <p class="product-title-en">${p.titleEn||''}</p>
+        <div class="product-sizes">${(p.sizes||[]).map(s=>`<span class="size-chip">${s}</span>`).join('')}</div>
+        <p class="product-desc">${p.desc}</p>
+        <div class="product-actions">
+          <a href="#contact" class="btn btn-primary btn-sm" style="flex:1;justify-content:center">استفسار</a>
+        </div>
+      </div>
+    </article>
+  `).join('') || '<p style="color:var(--g500)">لا توجد منتجات بعد.</p>';
+}
+
+function renderNews(){
+  const grid = document.getElementById('newsGrid');
+  grid.innerHTML = news.map(n => `
+    <article class="news-card">
+      <div class="news-img"><img src="${n.img}" alt="${n.title}" loading="lazy" /></div>
+      <div class="news-body">
+        <span class="news-date">${formatDate(n.date)}</span>
+        <h3 class="news-title">${n.title}</h3>
+        <p class="news-excerpt">${n.excerpt}</p>
+        <a href="#contact" class="news-link">اقرأ المزيد ←</a>
+      </div>
+    </article>
+  `).join('') || '<p style="color:var(--g500)">لا توجد أخبار حالياً.</p>';
+}
+
+function formatDate(d){
+  try{
+    const dt = new Date(d);
+    return dt.toLocaleDateString('ar-EG',{year:'numeric',month:'long',day:'numeric'});
+  }catch(e){ return d; }
+}
+
+/* ============================================================
+   ADMIN DASHBOARD LOGIC
+   ============================================================ */
+function renderAdminProducts(){
+  const list = document.getElementById('adminProductList');
+  list.innerHTML = products.map(p => `
+    <div class="admin-row">
+      <div class="admin-row-thumb"><img src="${p.img}" alt=""></div>
+      <div class="admin-row-body">
+        <strong>${p.title}</strong>
+        <small>${p.category} — ${p.titleEn||''}</small>
+      </div>
+      <div class="admin-row-actions">
+        <button class="icon-btn" onclick="adminEditProduct('${p.id}')" title="تعديل"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 000-1.42l-2.34-2.34a1.003 1.003 0 00-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg></button>
+        <button class="icon-btn" onclick="adminDeleteProduct('${p.id}')" title="حذف"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>
+      </div>
+    </div>
+  `).join('') || '<p style="color:var(--g500)">لا توجد منتجات.</p>';
+}
+function renderAdminNews(){
+  const list = document.getElementById('adminNewsList');
+  list.innerHTML = news.map(n => `
+    <div class="admin-row">
+      <div class="admin-row-thumb"><img src="${n.img}" alt=""></div>
+      <div class="admin-row-body"><strong>${n.title}</strong><small>${formatDate(n.date)}</small></div>
+      <div class="admin-row-actions">
+        <button class="icon-btn" onclick="adminEditNews('${n.id}')" title="تعديل"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/></svg></button>
+        <button class="icon-btn" onclick="adminDeleteNews('${n.id}')" title="حذف"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>
+      </div>
+    </div>
+  `).join('') || '<p style="color:var(--g500)">لا توجد أخبار.</p>';
+}
+function renderAdminInquiries(){
+  const list = document.getElementById('adminInquiryList');
+  list.innerHTML = inquiries.map(i => `
+    <div class="admin-row">
+      <div class="admin-row-body">
+        <strong>${i.name||'—'} ${i.company?'('+i.company+')':''}</strong>
+        <small>${i.type||'استفسار'} — ${i.phone||i.email||''} — ${i.date}</small>
+      </div>
+    </div>
+  `).join('') || '<p style="color:var(--g500)">لا توجد استفسارات بعد.</p>';
+}
+
+function adminAddProduct(){
+  const title = prompt('اسم المنتج (عربي):'); if(!title) return;
+  const titleEn = prompt('Product name (English):') || '';
+  const category = prompt('التصنيف:') || 'عام';
+  const sizes = (prompt('الأحجام (مفصولة بفاصلة):') || '').split(',').map(s=>s.trim()).filter(Boolean);
+  const desc = prompt('الوصف:') || '';
+  const img = prompt('رابط صورة المنتج:') || 'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&q=80';
+  products.push({id:'p'+Date.now(), title, titleEn, category, sizes, desc, img});
+  store.set('products', products);
+  renderProducts(); renderAdminProducts();
+  showToast('تم إضافة المنتج','success');
+}
+function adminEditProduct(id){
+  const p = products.find(x=>x.id===id); if(!p) return;
+  p.title = prompt('اسم المنتج:', p.title) || p.title;
+  p.titleEn = prompt('Product name (EN):', p.titleEn||'') || p.titleEn;
+  p.category = prompt('التصنيف:', p.category) || p.category;
+  p.desc = prompt('الوصف:', p.desc) || p.desc;
+  p.img = prompt('رابط الصورة:', p.img) || p.img;
+  store.set('products', products);
+  renderProducts(); renderAdminProducts();
+  showToast('تم تحديث المنتج','success');
+}
+function adminDeleteProduct(id){
+  if(!confirm('هل تريد حذف هذا المنتج؟')) return;
+  products = products.filter(x=>x.id!==id);
+  store.set('products', products);
+  renderProducts(); renderAdminProducts();
+  showToast('تم حذف المنتج','success');
+}
+function adminAddNews(){
+  const title = prompt('عنوان الخبر:'); if(!title) return;
+  const excerpt = prompt('ملخص الخبر:') || '';
+  const img = prompt('رابط الصورة:') || 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80';
+  news.unshift({id:'n'+Date.now(), date:new Date().toISOString().slice(0,10), title, excerpt, img});
+  store.set('news', news);
+  renderNews(); renderAdminNews();
+  showToast('تم نشر الخبر','success');
+}
+function adminEditNews(id){
+  const n = news.find(x=>x.id===id); if(!n) return;
+  n.title = prompt('العنوان:', n.title) || n.title;
+  n.excerpt = prompt('الملخص:', n.excerpt) || n.excerpt;
+  n.img = prompt('رابط الصورة:', n.img) || n.img;
+  store.set('news', news);
+  renderNews(); renderAdminNews();
+  showToast('تم تحديث الخبر','success');
+}
+function adminDeleteNews(id){
+  if(!confirm('حذف الخبر؟')) return;
+  news = news.filter(x=>x.id!==id);
+  store.set('news', news);
+  renderNews(); renderAdminNews();
+  showToast('تم الحذف','success');
+}
+function saveCompanyInfo(){
+  const info = {
+    phone: document.getElementById('infoPhone').value,
+    wa: document.getElementById('infoWa').value,
+    email: document.getElementById('infoEmail').value,
+    address: document.getElementById('infoAddress').value
+  };
+  store.set('companyInfo', info);
+  showToast('تم حفظ معلومات الشركة','success');
+}
+
+/* ============================================================
+   FORMS
+   ============================================================ */
+function handleFormSubmit(e, type){
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const data = Object.fromEntries(fd.entries());
+  data.type = type === 'partnership' ? (data.type || 'شراكة') : 'رسالة تواصل';
+  data.date = new Date().toLocaleString('ar-EG');
+  inquiries.unshift(data);
+  store.set('inquiries', inquiries);
+  renderAdminInquiries();
+  e.target.reset();
+  showToast('تم استلام طلبك بنجاح، سنتواصل معك قريباً.','success');
+}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+let toastTimer;
+function showToast(msg, kind='success'){
+  const t = document.getElementById('toast');
+  const m = document.getElementById('toastMsg');
+  m.textContent = msg;
+  t.className = 'toast show ' + kind;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>{ t.classList.remove('show'); }, 3500);
+}
+
+/* ============================================================
+   NAV & UI
+   ============================================================ */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Navbar scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Mobile toggle
+document.getElementById('mobileToggle').addEventListener('click', function(){
+  const open = this.getAttribute('aria-expanded') === 'true';
+  this.setAttribute('aria-expanded', String(!open));
+  document.getElementById('navLinks').classList.toggle('open', !open);
+});
+
+// Active nav on scroll
+const sections = ['home','about','products','manufacturing','quality','partners','news','contact'];
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 120;
+  let current = 'home';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if(el && el.offsetTop <= y) current = id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#'+current);
+  });
+});
+
+// Tabs (about section)
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Admin modal
+const adminModal = document.getElementById('adminModal');
+document.getElementById('fabAdmin').addEventListener('click', () => {
+  adminModal.classList.add('open');
+  renderAdminProducts(); renderAdminNews(); renderAdminInquiries();
+});
+document.getElementById('adminClose').addEventListener('click', () => adminModal.classList.remove('open'));
+adminModal.addEventListener('click', (e) => { if(e.target === adminModal) adminModal.classList.remove('open'); });
+
+// Admin tabs
+document.querySelectorAll('.admin-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.admin-pane').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelector(`.admin-pane[data-apane="${tab.dataset.atab}"]`).classList.add('active');
+  });
+});
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderProducts();
+renderNews();
+renderAdminProducts();
+renderAdminNews();
+renderAdminInquiries();
+</script>
+</body>
+</html>
